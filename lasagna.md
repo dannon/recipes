@@ -14,7 +14,7 @@ Ingredients
 * 1 tsp oregano
 * 1/2 tsp marjoram
 * 12oz chopped spinach
-* 16oz ricotta cheese
+* 16oz ricotta cheese  (TODO: bump this up if actually doing 3 layers)
 * 16oz (4c) shredded Mozzarella (original recipe actually says 2, but, cheese.)
 * 16oz (4c) shredded Muenster (2, but, cheese.)
 * 1/2c Grated Parmesan
