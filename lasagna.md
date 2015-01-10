@@ -13,6 +13,7 @@ Ingredients
 * 1 tsp basil
 * 1 tsp oregano
 * 1/2 tsp marjoram
+* 12oz chopped spinach
 * 16oz ricotta cheese
 * 16oz (4c) shredded Mozzarella (original recipe actually says 2, but, cheese.)
 * 16oz (4c) shredded Muenster (2, but, cheese.)
