@@ -4,7 +4,7 @@ Simple Lemon Ice Cream
 
 Mix:
 - 1c heavy cream
-- 1c whole milk
+- 1c whole milk (2% worked fine, add a tad more heavy cream I guess if so)
 - .5c sugar (or a tad more)
 - juice of 3 small lemons; reserve zest
 - 2tsp vanilla extract
