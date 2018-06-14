@@ -1,10 +1,10 @@
 Easy Focaccia (simplified from SE)
 =============
-500g flour
-20g salt
-5g instant yeast
-350g water
-2 Tbsp olive oil
+- 500g flour
+- 20g salt
+- 5g instant yeast
+- 350g water
+- 2 Tbsp olive oil
 
 * Use a kitchen scale and weights, way easier than measuring.
 
