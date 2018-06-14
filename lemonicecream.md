@@ -1,4 +1,4 @@
-Lemon Ice Cream
+Simple Lemon Ice Cream
 ===============
 (adapted from Saveur vanilla base)
 
