@@ -1,4 +1,4 @@
-Easy Focaccia
+Easy Focaccia (simplified from SE)
 =============
 500g flour
 20g salt
