@@ -6,8 +6,6 @@ Easy Focaccia (simplified from SE)
 - 350g water
 - 2 Tbsp olive oil
 
-* Use a kitchen scale and weights, way easier than measuring.
-
 1. Mix it all up in a large bowl, just until there's no dry flour.  There should still be lumps.
 2. Cover with a wet towel or plastic wrap for at least 12h.
 3. Flour hands and work surface generously, pull out yeast and form into a ball, tucking seam underneath.
