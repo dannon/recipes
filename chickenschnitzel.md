@@ -13,3 +13,9 @@ Chicken Schnitzel Dusseldorf  (from Aunt Linda)
 2. Combine flour & seasonings - coat chicken dip in egg and coat with mixture of crumbs and cheese
 3. Chill
 4. Fry in margarine ~6min till done
+
+
+Original Recipe
+===============
+![Schnitzel1](schnitzel1.jpg)
+![Schnitzel2](schnitzel2.jpg)
