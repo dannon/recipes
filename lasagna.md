@@ -31,3 +31,10 @@ Steps
 6. In a 13x9" pan, spread the reserved 2/3c tomato sauce.
 7. Layer 1/3 each lasagna, ricotta mixture, meat mixture, mozarella + muenster cheeses.  Repeat layers x3.
 8. Bake uncovered at 350 until hot and bubbling (40-50min).  Let stand 5-10m before cutting.
+
+
+Original Recipe
+===============
+![lasagna1](lasagna1.jpg)
+![lasagna2](lasagna2.jpg)
+![lasagna3](lasagna3.jpg)
