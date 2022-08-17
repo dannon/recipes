@@ -1,6 +1,11 @@
 Lomo Saltado (from Recipe Club / Brieana Carroll)
 =================================================
 
+Recipe Club Video: https://www.youtube.com/watch?v=pb6iRqYQl8g
+
+
+Ingredients
+-----------
 - 1 lb top sirloin, filet, or hanger steak (I’ve tried this with all three cuts, and it’s good with all of them) *
 - salt and pepper for the meat
 - 3 tablespoons vegetable oil
