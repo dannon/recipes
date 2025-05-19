@@ -59,7 +59,7 @@ image: "/recipe-image.jpg"  # optional
 - [x] Recipe content collections
 - [x] Mobile-responsive design
 - [x] Recipe migration
-- [ ] Tailwind CSS styling
+- [x] Tailwind CSS styling
 - [ ] Search functionality (Pagefind)
 - [ ] Category filtering
 - [ ] Recipe submission form

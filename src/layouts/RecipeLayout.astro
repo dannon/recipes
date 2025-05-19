@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 export interface Props {
   title: string;
   description?: string;
@@ -22,174 +24,150 @@ const totalTime = prepTime && cookTime ? prepTime + cookTime : undefined;
     <title>{title} - My Recipe Box</title>
     <meta name="description" content={description || title} />
   </head>
-  <body>
-    <nav>
-      <a href="/">← Back to Recipe Box</a>
+  <body style="min-height: 100vh; background-color: #f9fafb;">
+    <nav style="max-width: 56rem; margin: 0 auto; padding: 1rem;">
+      <a href="/" style="display: inline-flex; align-items: center; gap: 0.25rem; color: #2563eb; text-decoration: none;">
+        <span>←</span>
+        <span>Back to Recipe Box</span>
+      </a>
     </nav>
-    <main>
-      <article class="recipe">
-        <header>
-          <h1>{title}</h1>
-          {description && <p class="description">{description}</p>}
+    <main style="max-width: 56rem; margin: 0 auto; padding: 0 1rem 2rem;">
+      <article style="background: white; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+        <header style="padding: 1.5rem;">
+          <h1 style="font-size: 1.875rem; font-weight: bold; color: #111827; margin-bottom: 0.5rem;">{title}</h1>
+          {description && <p style="color: #6b7280; font-style: italic; font-size: 1.125rem; margin-bottom: 1rem;">{description}</p>}
           
-          <div class="recipe-meta">
-            {servings && <span>Servings: {servings}</span>}
-            {prepTime && <span>Prep: {prepTime} min</span>}
-            {cookTime && <span>Cook: {cookTime} min</span>}
-            {totalTime && <span>Total: {totalTime} min</span>}
-            {difficulty && <span>Difficulty: {difficulty}</span>}
-            {cuisine && <span>Cuisine: {cuisine}</span>}
+          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; font-size: 0.875rem; color: #6b7280; margin-bottom: 1rem;">
+            {servings && (
+              <span style="display: flex; align-items: center; gap: 0.25rem;">
+                <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+                Servings: {servings}
+              </span>
+            )}
+            {prepTime && (
+              <span style="display: flex; align-items: center; gap: 0.25rem;">
+                <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Prep: {prepTime} min
+              </span>
+            )}
+            {cookTime && (
+              <span style="display: flex; align-items: center; gap: 0.25rem;">
+                <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"></path>
+                </svg>
+                Cook: {cookTime} min
+              </span>
+            )}
+            {totalTime && (
+              <span style="display: flex; align-items: center; gap: 0.25rem;">
+                <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Total: {totalTime} min
+              </span>
+            )}
+            {difficulty && (
+              <span style="display: flex; align-items: center; gap: 0.25rem;">
+                <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+                Difficulty: {difficulty}
+              </span>
+            )}
+            {cuisine && (
+              <span style="display: flex; align-items: center; gap: 0.25rem;">
+                <svg style="width: 1rem; height: 1rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                </svg>
+                Cuisine: {cuisine}
+              </span>
+            )}
           </div>
           
           {categories && categories.length > 0 && (
-            <div class="categories">
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
               {categories.map(category => (
-                <span class="category">{category}</span>
+                <span style="padding: 0.25rem 0.75rem; background-color: #dbeafe; color: #1d4ed8; font-size: 0.875rem; border-radius: 9999px;">{category}</span>
               ))}
             </div>
           )}
         </header>
         
-        <div class="content">
+        <div class="recipe-content" style="padding: 1.5rem;">
           <slot />
         </div>
       </article>
     </main>
     
     <style>
-      body {
-        font-family: system-ui, -apple-system, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 1rem;
-      }
-      
-      nav {
-        margin-bottom: 1rem;
-      }
-      
-      nav a {
-        color: #2c3e50;
-        text-decoration: none;
-        font-size: 0.95rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.25rem;
-      }
-      
       nav a:hover {
         text-decoration: underline;
       }
       
-      .recipe {
-        background: white;
-        border-radius: 8px;
-        padding: 1.5rem;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      }
-      
-      h1 {
-        color: #2c3e50;
-        margin-bottom: 0.5rem;
-        font-size: 1.75rem;
-      }
-      
-      h2 {
-        color: #2c3e50;
+      .recipe-content h2 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #111827;
         margin-top: 1.5rem;
         margin-bottom: 0.75rem;
-        font-size: 1.25rem;
       }
       
-      .description {
-        color: #666;
-        font-style: italic;
+      .recipe-content ul,
+      .recipe-content ol {
+        padding-left: 1.25rem;
         margin-bottom: 1rem;
       }
       
-      .recipe-meta {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-        margin-bottom: 1rem;
-        font-size: 0.9rem;
-        color: #666;
+      .recipe-content ul {
+        list-style-type: disc;
       }
       
-      .categories {
-        display: flex;
-        gap: 0.5rem;
-        margin-bottom: 1.5rem;
-        flex-wrap: wrap;
+      .recipe-content ol {
+        list-style-type: decimal;
       }
       
-      .category {
-        background: #e0e0e0;
-        padding: 0.25rem 0.75rem;
-        border-radius: 16px;
-        font-size: 0.85rem;
-      }
-      
-      .content ul, .content ol {
-        padding-left: 1.5rem;
-      }
-      
-      .content li {
+      .recipe-content li {
+        color: #374151;
         margin-bottom: 0.5rem;
       }
       
-      img {
+      .recipe-content img {
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        margin: 1rem 0;
         max-width: 100%;
         height: auto;
-        border-radius: 8px;
-        margin: 1rem 0;
       }
       
-      @media (max-width: 768px) {
-        body {
-          padding: 0.75rem;
+      .recipe-content p {
+        margin-bottom: 1rem;
+        color: #374151;
+      }
+      
+      .recipe-content a {
+        color: #2563eb;
+        text-decoration: underline;
+      }
+      
+      .recipe-content a:hover {
+        color: #1d4ed8;
+      }
+      
+      @media (max-width: 640px) {
+        header {
+          padding: 1rem;
         }
         
-        .recipe {
+        .recipe-content {
           padding: 1rem;
-          border-radius: 6px;
         }
         
         h1 {
           font-size: 1.5rem;
-        }
-        
-        h2 {
-          font-size: 1.15rem;
-          margin-top: 1.25rem;
-        }
-        
-        .description {
-          font-size: 0.95rem;
-        }
-        
-        .recipe-meta {
-          font-size: 0.85rem;
-          gap: 0.75rem;
-        }
-        
-        .categories {
-          gap: 0.4rem;
-        }
-        
-        .category {
-          font-size: 0.8rem;
-          padding: 0.2rem 0.6rem;
-        }
-        
-        .content {
-          font-size: 0.95rem;
-        }
-        
-        .content ul, .content ol {
-          padding-left: 1.25rem;
         }
       }
     </style>
