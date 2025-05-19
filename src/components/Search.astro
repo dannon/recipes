@@ -1,0 +1,120 @@
+---
+---
+
+<div id="search" class="search-container" style="margin: 20px 0;">
+  <!-- Pagefind UI will be loaded here -->
+</div>
+
+<script is:inline>
+  // Wait for the page to load
+  window.addEventListener('DOMContentLoaded', () => {
+    // Add pagefind CSS
+    const cssLink = document.createElement('link');
+    cssLink.rel = 'stylesheet';
+    cssLink.href = '/pagefind/pagefind-ui.css';
+    document.head.appendChild(cssLink);
+    
+    // Add custom styles
+    const style = document.createElement('style');
+    style.textContent = `
+      .pagefind-ui__search-input {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      
+      .pagefind-ui__search-input:focus {
+        border-color: #3b82f6;
+      }
+      
+      .pagefind-ui__results {
+        margin-top: 20px;
+      }
+      
+      .pagefind-ui__result {
+        padding: 15px;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        transition: box-shadow 0.2s;
+      }
+      
+      .pagefind-ui__result:hover {
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      }
+      
+      .pagefind-ui__result-link {
+        color: #111827;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .pagefind-ui__result-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #1f2937;
+      }
+      
+      .pagefind-ui__result-excerpt {
+        font-size: 14px;
+        color: #6b7280;
+        line-height: 1.5;
+      }
+      
+      .pagefind-ui__message {
+        text-align: center;
+        color: #6b7280;
+        padding: 40px 20px;
+      }
+    `;
+    document.head.appendChild(style);
+    
+    // Load pagefind scripts
+    const pagefindScript = document.createElement('script');
+    pagefindScript.src = '/pagefind/pagefind.js';
+    
+    pagefindScript.onload = () => {
+      const pagefindUIScript = document.createElement('script');
+      pagefindUIScript.src = '/pagefind/pagefind-ui.js';
+      
+      pagefindUIScript.onload = () => {
+        try {
+          // Initialize the search UI once all scripts are loaded
+          new window.PagefindUI({
+            element: "#search",
+            showSubResults: true,
+            showImages: false,
+            resetStyles: false,
+            translations: {
+              placeholder: "Search recipes...",
+              results_term: "recipe",
+              results_term_plural: "recipes"
+            }
+          });
+        } catch (e) {
+          console.error('Error initializing search:', e);
+          document.getElementById('search').innerHTML = `
+            <div style="
+              text-align: center;
+              color: #6b7280;
+              padding: 20px;
+              background-color: #f9fafb;
+              border-radius: 8px;
+            ">
+              Search error: ${e.message}. Please try again later.
+            </div>
+          `;
+        }
+      };
+      
+      document.head.appendChild(pagefindUIScript);
+    };
+    
+    document.head.appendChild(pagefindScript);
+  });
+</script>
